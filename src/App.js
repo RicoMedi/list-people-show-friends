@@ -8,8 +8,13 @@ class App extends Component {
     console.log("constructor invoked");
     super();
     this.state = {
-      friends: people
+      friends: []
     };
+  }
+
+  componentDidMount(){
+    console.log("CDM invoked");
+    this.setState({ friends: people });
   }
 
   render() {
